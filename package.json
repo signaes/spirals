@@ -1,6 +1,6 @@
 {
   "name": "spirals",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "main/index.js",
   "repository": "git@github.com:signaes/spirals.git",
   "author": "Thiago Oliveira <thiago@signaes.co>",
