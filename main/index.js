@@ -19,8 +19,8 @@ const Left = value => ({
 const Maybe = value => ({
   isNothing: () => value === null || value === undefined,
   map: f => this.isNothing() ? Maybe(null) : Maybe(f(this.value)),
-  getValue: () => value,
-  inspect: () => `Maybe(${value})`
+  inspect: () => `Maybe(${value})`,
+  value
 });
 
 const Either = (left, right, value) => Maybe(value).isNothing()
