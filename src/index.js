@@ -18,7 +18,7 @@ export const Left = value => ({
 
 export const Maybe = value => ({
   isNothing: () => value === null || value === undefined,
-  map: f => this.isNothing() ? Maybe(null) : Maybe(f(this.value)),
+  map: f => Maybe(value).isNothing() ? Maybe(null) : Maybe(f(value)),
   inspect: () => `Maybe(${value})`,
   value
 });
