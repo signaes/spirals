@@ -10,7 +10,7 @@
     "test:watch": "nyc ava tests --watch --verbose",
     "lint": "eslint **/*.js",
     "lint:watch": "esw --color --watch **/*.js",
-    "coverage": "nyc"
+    "coverage": "nyc report"
   },
   "devDependencies": {
     "ava": "^0.19.1",
