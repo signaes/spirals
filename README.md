@@ -1,3 +1,5 @@
+[![NSP Status](https://nodesecurity.io/orgs/spirals/projects/a9780b5f-f1d9-4559-a7cd-3889f66d2737/badge)](https://nodesecurity.io/orgs/spirals/projects/a9780b5f-f1d9-4559-a7cd-3889f66d2737)
+
 # spirals
 
 Simple functional utilities for javascript.
