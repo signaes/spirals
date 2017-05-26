@@ -22,6 +22,8 @@ npm install spirals
 Examples:
 
 ```
+import { Maybe, Either } from 'spirals';
+
 const double = n => n + n;
 
 Maybe(1).map(double).value;
