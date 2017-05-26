@@ -6,8 +6,19 @@
 
 Simple functional utilities for javascript.
 
-For the moment: `Maybe` and `Either`
+For the moment: `Maybe` and `Either`.
 
+Intall it with yarn:
+
+```
+yarn add spirals
+```
+
+or npm:
+
+```
+npm install spirals
+```
 Examples:
 
 ```
