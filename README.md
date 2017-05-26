@@ -18,4 +18,18 @@ Maybe(1).map(double).value;
 
 Maybe(null).map(double).value;
 // returns null
+
+Either({
+    value: null,
+    left: () => 'nothing here',
+    right: value => value * 10
+  });
+// returns 'nothing here'
+
+Either({
+    value: 1.5,
+    left: () => 'nothing here',
+    right: value => value * 10
+  });
+// returns 15
 ```
