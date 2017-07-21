@@ -17,8 +17,17 @@ test('Maybe(1).map(n => n + n) should be Maybe(2)\n.map callback should be calle
   t.is(Maybe(1).map(n => n + n).inspect(), 'Maybe(2)');
 });
 
-test('Maybe(null).map(n => n + n) should be Maybe(null)\n.map callback should no be called on a value that is something', t => {
+test('Maybe(null).map(n => n + n) should be Maybe(null)\n.map callback should not be called on a value that is nothing', t => {
   t.is(Maybe(null).map(n => n + n).inspect(), 'Maybe(null)');
+});
+
+test('Maybe(Object).get(prop) should return the property value if it exists, otherwise should return null', t => {
+  t.is(Maybe({a: 'ok'}).get('a'), 'ok');
+  t.is(Maybe({a: 'ok'}).get('b'), null);
+  t.is(Maybe({}).get('b'), null);
+  t.is(Maybe(null).get('b'), null);
+  t.is(Maybe('string').get('b'), null);
+  t.is(Maybe('string').get('length'), 'string'.length);
 });
 
 test('Maybe(1).inspect() should return the string "Maybe(1)"', t => {

@@ -10,6 +10,11 @@ var Maybe = function Maybe(value) {
     map: function map(f) {
       return Maybe(value).isNothing() ? Maybe(null) : Maybe(f(value));
     },
+    get: function get(prop) {
+      return Maybe(value).map(function (value) {
+        return value.hasOwnProperty(prop) ? value[prop] : null;
+      }).value;
+    },
     inspect: function inspect() {
       return "Maybe(" + value + ")";
     },
