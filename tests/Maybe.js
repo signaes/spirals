@@ -22,12 +22,12 @@ test('Maybe(null).map(n => n + n) should be Maybe(null)\n.map callback should no
 });
 
 test('Maybe(Object).get(prop) should return the property value if it exists, otherwise should return null', t => {
-  t.is(Maybe({a: 'ok'}).get('a'), 'ok');
-  t.is(Maybe({a: 'ok'}).get('b'), null);
-  t.is(Maybe({}).get('b'), null);
-  t.is(Maybe(null).get('b'), null);
-  t.is(Maybe('string').get('b'), null);
-  t.is(Maybe('string').get('length'), 'string'.length);
+  t.is(Maybe({a: 'ok'}).get('a').value, 'ok');
+  t.is(Maybe({a: 'ok'}).get('b').value, null);
+  t.is(Maybe({}).get('b').value, null);
+  t.is(Maybe(null).get('b').value, null);
+  t.is(Maybe('string').get('b').value, null);
+  t.is(Maybe('string').get('length').value, 'string'.length);
 });
 
 test('Maybe(1).inspect() should return the string "Maybe(1)"', t => {

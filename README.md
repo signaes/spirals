@@ -31,11 +31,14 @@ Maybe(1).map(double).value;
 Maybe(null).map(double).value;
 // returns null
 
-Maybe({a: 10}).get('a');
+Maybe({a: 10}).get('a').value;
 // returns 10
 
-Maybe({b: 10}).get('a');
+Maybe({b: 10}).get('a').value;
 // returns null
+
+Maybe({n: 20}).get('n').map(double);
+// returns Maybe(40)
 
 Either({
     value: null,

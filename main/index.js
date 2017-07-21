@@ -13,7 +13,7 @@ var Maybe = function Maybe(value) {
     get: function get(prop) {
       return Maybe(value).map(function (value) {
         return value.hasOwnProperty(prop) ? value[prop] : null;
-      }).value;
+      });
     },
     inspect: function inspect() {
       return "Maybe(" + value + ")";
